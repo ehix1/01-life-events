@@ -17,15 +17,36 @@ if (pineapplePizza === true) {
     `My name is ${firstName} and I'm not into pineapples on pizza. I am currently ${age} years old and my birthday is on ${birthday}`
   );
 }
-for (i = 0; i <= 3; i++) {
-  console.log(lifeEvents);
+
+for (i = 0; i < lifeEvents.length; i++) {
+  console.log(lifeEvents[i]);
 }
-let randomNumber = Math.floor(Math.random() * 10);
-for (randomNumber === 5) {
-    if (randomNumber !==5) {
-        console.log(`${randomNumber} !==5`);
-    } else {
-        console.log(5===5);
-    }
+
+let counter = 0;
+while (true) {
+  const randomNumber = Math.floor(Math.random() * 10 + 1);
+  if (randomNumber !== 5) {
+    counter++;
+    console.log(`${randomNumber} !==5`);
+  } else {
+    counter++;
+    console.log(
+      `5 === 5. It took ${counter} iterations to randomly generate the number 5.`
+    );
     break;
+  }
 }
+
+let hours = 50;
+let wage = 10;
+let paycheck = 40 * wage;
+if (hours > 40) {
+  let overtimeHours = hours - 40;
+  let overtimePay = overtimeHours * wage * 1.5;
+  paycheck += overtimePay;
+}
+console.log(paycheck);
+
+weeks = Math.ceil(1000000 / paycheck);
+console.log(`It would take ${weeks} to earn 1 million bucks!.
+    `);
